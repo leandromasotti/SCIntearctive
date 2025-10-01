@@ -9,7 +9,7 @@ contract King is IKing {
 
     function bet() external payable {
         require(msg.value>apuestaMaxima,"aun no eres rey");
-        apuestaMaxima= msg.value;
+        apuestaMaxima= msg.value;;
         payable(king).transfer(apuestaMaxima);
         king= msg.sender;
     }
